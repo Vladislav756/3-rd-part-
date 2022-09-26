@@ -1,8 +1,4 @@
 #include <iostream>
-//—оздать подобные методы дл€ вычитани€, умножени€ и делени€, а также создать метод "ChooseOperation", 
-//который принимает на вход enum OperatorType, 
-//который вам необходимо создать, он должен состо€ть из 4-х операций, методы дл€ которых были уже созданы. 
-//ѕри вызове ChooseOperation пользователь должен ввести номер операции, после чего соответсвенный метод будет выполнен.
 
 int addition(int a, int b)
 {
@@ -48,25 +44,32 @@ int main()
 
     std::cin >> ChooseOperation;
 
-    if (ChooseOperation == ADDICTION)
+    switch (ChooseOperation)
     {
+    case 1:
         addition(a, b);
-    }
-    else if (ChooseOperation == SUBTRACT)
-    {
+        break;
+
+    case 2:
+    
         subtract(a, b);
-    }
-    else if (ChooseOperation == MULTYPLY)
-    {
+        break;
+    
+    case 3:
+
         multyply(a, b);
-    }
-    else if (ChooseOperation == DIVIDE)
-    {
+        break;
+
+    case 4:
+    
         divide(a, b);
-    }
-    else
-    {
+        break;
+    
+    default:
+    
         std::cout << "Something wrong";
+        break;
+    
     }
 
     return 0;

@@ -1,35 +1,32 @@
 #include <iostream>
 
-//Создайте 3 переменных (int, double, string), проинциализируйте их, далее создайте 3 метода с одним названием "variableType", но каждый из них принимает разные типы данных (int, double, string). 
-//На выходе каждый метод должен выдавать сообщение по типу "число - это integer". Для каждоый ранее созданной переменной вызовите метод "variableType"
-
-int variableType(int number)
+void variableType(int number)
 {
-    std::cout << "Number is integer " << number;
+    std::cout << "Number is integer \n" << number;
 }
-double variableType(double bignumber)
+void variableType(double bignumber)
 {
-    std::cout << "Number with point double " << bignumber;
+    std::cout << "Number with point double \n" << bignumber;
 }
-std::string variableType(std::string stroki)
+void variableType(std::string stroki)
 {
-    std::cout << "String is string " << stroki;
+    std::cout << "String is string \n" << stroki;
 }
 
 
 int main()
 {
-    int chislo = 300;
+    int number = 100;
 
-    double chislo_stochkoi = 3.14;
+    double number_with_point = 3.14;
 
-    std::string stroka = "stroka je";
+    std::string str = "string";
 
-    variableType(chislo);
+    variableType(number);
 
-    variableType(chislo_stochkoi);
+    variableType(number_with_point);
 
-    variableType(stroka);
+    variableType(str);
 
     return 0;
 }

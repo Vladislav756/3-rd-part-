@@ -1,10 +1,6 @@
 #include <iostream>
 #include <string>
-
-//Создайте строку string любого размера не меньше 3 сиволов и создайте метод, который принимает строку и 1 символ
-//На выходе метод должен выдавать сколько раз символ встречается в строке.
-
-void ContainSymbol(char a, std::string str)
+void ContainSymbol(char a, char str[])
 {
     int meets = 0;
 
@@ -28,7 +24,9 @@ void ContainSymbol(char a, std::string str)
 
 int main()
 {
-    std::string str = "Sperasoft";
+    //std::string str = "Sperasoft";
+
+    char arr_str[] = "Speeerasoft";
 
     char ch;
 
@@ -36,7 +34,7 @@ int main()
 
     std::cin >> ch;
 
-    ContainSymbol(ch, str);
+    ContainSymbol(ch, arr_str);
 
     return 0;
 }
